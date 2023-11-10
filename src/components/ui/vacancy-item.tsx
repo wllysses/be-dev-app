@@ -51,7 +51,7 @@ export function VacancyItem({
             <MoreVertical size={18} />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="flex items-center justify-around gap-2 flex-wrap">
+        <PopoverContent className="flex items-center justify-around gap-2 flex-wrap max-w-[160px]">
           <WhatsappShareButton url={vacancyJobUrl}>
             <WhatsappIcon round={true} size={25} />
           </WhatsappShareButton>

@@ -1,5 +1,3 @@
-import {VacancyProps} from "@/types";
-
 async function getVacancies(role: string) {
   const query = {
     limit: '20',

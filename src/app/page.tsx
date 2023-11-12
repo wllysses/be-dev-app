@@ -1,5 +1,5 @@
 import { RoleSelect } from "@/components/ui/role-selector";
-import { Vacancys } from "@/components/ui/vacancys";
+import { Vacancies } from "@/components/ui/vacancies";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <RoleSelect />
       </div>
 
-      <Vacancys />
+      <Vacancies />
     </main>
   );
 }

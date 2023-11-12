@@ -1,4 +1,6 @@
-async function getVacancys(role: string) {
+import {VacancyProps} from "@/types";
+
+async function getVacancies(role: string) {
   const query = {
     limit: '20',
     jobName: role,
@@ -41,5 +43,5 @@ async function getVacancys(role: string) {
 }
 
 export const api = {
-  getVacancys,
+  getVacancies,
 };

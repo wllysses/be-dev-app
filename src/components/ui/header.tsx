@@ -10,7 +10,7 @@ export function Header() {
   const { setInput } = useStore();
 
   return (
-    <header className="p-4 border border-b">
+    <header className="p-4 border border-b fixed z-20 bg-[white] w-[100vw] top-0">
       <div className="container mx-auto flex items-center justify-between gap-6 max-[525px]:flex-col w-full">
         <Link className="flex flex-col" href="/">
           <h1 className="font-semibold text-3xl flex items-center gap-3">

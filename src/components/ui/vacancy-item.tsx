@@ -23,16 +23,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "react-share";
-
-type VacancyItemProps = {
-  companyLogo: string;
-  companyName: string;
-  vacancyName: string;
-  isRemoteWork: boolean;
-  vacancyCountry: string;
-  publishedDate: string;
-  vacancyJobUrl: string;
-};
+import {VacancyItemProps} from "@/types";
 
 export function VacancyItem({
   companyLogo,

@@ -8,7 +8,6 @@ export default function Home() {
         <h2 className="font-semibold text-2xl">Vagas disponíveis</h2>
         <RoleSelect />
       </div>
-
       <Vacancies />
     </main>
   );

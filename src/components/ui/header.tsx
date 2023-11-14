@@ -5,12 +5,13 @@ import { Code2 } from "lucide-react";
 import { useStore } from "@/lib/utils";
 import { Input } from "./input";
 import { ModeToggle } from "./theme-toggle";
+import { Card } from "./card";
 
 export function Header() {
   const { setInput } = useStore();
 
   return (
-    <header className="p-4 border border-b fixed top-0 w-full z-50 bg-white">
+    <Card className="p-4 fixed top-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between gap-6 max-[525px]:flex-col w-full">
         <Link className="flex flex-col" href="/">
           <h1 className="font-semibold text-3xl flex items-center gap-3">
@@ -28,6 +29,6 @@ export function Header() {
           <ModeToggle />
         </div>
       </div>
-    </header>
+    </Card>
   );
 }

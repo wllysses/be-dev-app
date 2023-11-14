@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Be Dev - Vagas para Front-end",
+  title: "Be Dev - Vagas para Devs",
   description:
     "Encontre aqui a sua vaga como Desenvolvedor de Software através da plataforma GUPY.",
 };

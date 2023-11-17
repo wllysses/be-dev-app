@@ -13,7 +13,7 @@ export function RoleSelect() {
   const { role, setRole } = useStore();
   return (
     <Select onValueChange={setRole} defaultValue={role}>
-      <SelectTrigger className="w-[150px]">
+      <SelectTrigger className="w-[150px]" data-testid="role-selector">
         <SelectValue placeholder="Selecionar" />
       </SelectTrigger>
       <SelectContent>

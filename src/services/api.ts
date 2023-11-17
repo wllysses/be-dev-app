@@ -1,10 +1,10 @@
-async function getVacancies(role: string) {
-  const query = {
-    limit: "20",
-    jobName: role,
-    isRemoteWork: "true",
-    type: "vacancy_type_effective",
-  };
+async function getVacancies(role: string, offSet: number) {
+  // const query = {
+  //   limit: "20",
+  //   jobName: role,
+  //   isRemoteWork: "true",
+  //   type: "vacancy_type_effective",
+  // };
 
   if (
     !process.env.NEXT_PUBLIC_GUPY_ENDPOINT ||
@@ -16,7 +16,8 @@ async function getVacancies(role: string) {
   const endpoint = process.env.NEXT_PUBLIC_GUPY_ENDPOINT;
   const cors = process.env.NEXT_PUBLIC_CORS_BP;
 
-  const finalEndpoint = `${cors}${endpoint}?${new URLSearchParams(query)}`;
+  //const finalEndpoint = `${cors}${endpoint}?${new URLSearchParams(query)}`;
+  let finalEndpoint = `${cors}${endpoint}?limit=10&offset=${offSet}&jobName=${role}&isRemoteWork=true&type=vacancy_type_effective`;
 
   const response = await fetch(finalEndpoint, {
     cache: "force-cache",

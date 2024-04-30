@@ -6,18 +6,26 @@ import { useStore } from "@/lib/utils";
 import { Input } from "./input";
 import { ModeToggle } from "./theme-toggle";
 import { Card } from "./card";
+import { useTheme } from "next-themes";
 
 export function Header() {
+  const { theme } = useTheme();
   const { setInput } = useStore();
 
   return (
     <Card className="p-4 fixed top-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between gap-6 max-[525px]:flex-col w-full">
         <Link className="flex flex-col" href="/">
-          <h1 className="font-semibold text-3xl flex items-center gap-3">
-            beDev <Code2 />
-          </h1>
-          <span className="text-xs text-muted-foreground">Vagas para Devs</span>
+          <div className="flex items-center gap-2">
+            <div
+              className={`size-8 rounded flex items-center justify-center bg-black text-white`}
+            >
+              <Code2 size={18} />
+            </div>
+            <h1 className="font-semibold text-2xl flex items-center gap-3">
+              be.dev
+            </h1>
+          </div>
         </Link>
         <div className="flex items-center gap-4">
           <Input
